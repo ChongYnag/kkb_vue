@@ -19,11 +19,17 @@ class VueRouter {
     init(){
         // 绑定浏览器时间
         this.bindEvents();
+
+        // 解析路由配置 
     }
 
     bindEvents(){
         window.addEventListener('hashchange',this.onHashChange.bind(this))
         window.addEventListener('load',this.onHashChange.bind(this))
+    }
+
+    onHashChange(e){
+        this.app.current = window.Location.hash.slice(1) || '/'
     }
 }
 

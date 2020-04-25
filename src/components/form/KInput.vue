@@ -6,6 +6,9 @@
 
 <script>
 export default {
+  model:{
+    props:""
+  },
   props: {
     value: {
       type: String,
